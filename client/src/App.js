@@ -10,6 +10,7 @@ import Write from './pages/Write';
 import Single from './pages/Single';
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+import './style.css'
 
 // using <Outlet method to common the files>
 const Layout = () => {
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
 
 function App() {
   return (
-    <div className="App">
+    <div className="app">
       <div className="container">
       <RouterProvider router={router}></RouterProvider>
       </div>

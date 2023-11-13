@@ -1,0 +1,277 @@
+:root {
+    --background: #113f67;
+    --color: #e7eaf6;
+    --secondBG: #a2a8d3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Login and Register pages */
+.auth {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--background);
+    height: 100vh;
+    flex-direction: column;
+}
+
+h1 {
+    /* font-size: 20px; */
+    color: var(--color);
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    width: 50%;
+    gap: 20px;
+    background-color: white;
+}
+
+input {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--background);
+}
+
+button {
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 3px;
+    border-bottom: 1px solid var(--background);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--background);
+    color: var(--color);
+}
+
+span {
+    font-size: 13px;
+    text-align: center;
+}
+
+/* for login page */
+p#loginError {
+    font-size: 12px;
+    color: grey;
+    text-align: center;
+}
+
+/* for register page */
+p#registerError {
+    font-size: 12px;
+    color: grey;
+    text-align: center;
+}
+
+/* navbar styles */
+.navbar {
+    background-color: var(--background);
+}
+
+.navContainer {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navLinks {
+    display: flex;
+    gap: 10px;
+    text-decoration: none;
+    color: var(--color);
+    align-items: center;
+}
+
+.navLinks .link {
+    text-decoration: none;
+    color: var(--color);
+    display: flex;
+}
+
+.navLinks span {
+    font-size: 16px;
+    font-weight: 300;
+    color: var(--color);
+}
+
+.write {
+    background-color: var(--secondBG);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0.5px solid var(--secondBG);
+}
+
+.write:hover {
+    background-color: var(--background);
+    border: 0.5px solid var(--color);
+}
+
+.navContainer span {
+    cursor: pointer;
+}
+
+/* footer styling */
+
+footer {
+    margin-top: 100px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--background);
+    color: var(--color);
+    font-size: 12px;
+}
+
+
+/* home page css */
+.posts {
+    margin: 50px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+}
+
+.post {
+    display: flex;
+    gap: 100px;
+    padding: 10px 40px;
+}
+
+.post:nth-child(2n+1) {
+    flex-direction: row-reverse;
+}
+
+.post .img {
+    flex: 2;
+    position: relative;
+}
+
+.post .img::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: var(--background);
+    position: absolute;
+    top: 20px;
+    left: -20px;
+    z-index: -1;
+}
+
+.post .img img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.post .content {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post .content h2 {
+    font-size: 30px;
+}
+
+.post .content span {
+    font-size: 16px;
+}
+
+.post .content button {
+    width: max-content;
+    padding: 10px 20px;
+}
+
+/* single page styles */
+.singlePage{
+    display: flex;
+    gap: 50px;
+    border-bottom: 1px dotted var(--background);
+}
+
+.singlePage .content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex: 5;
+    border-right: 1px dotted var(--background);
+    padding: 10px;
+}
+.singlePage .menu{
+    flex: 2;
+}
+
+.userInfo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.singlePage .content .user img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.info span{
+    font-weight: bold;
+}
+
+.content  h1{
+    font-size: 42px;
+    color: #113f67;
+}
+.content p{
+    text-align: justify;
+    padding:  0 40px 0 0;
+    line-height: 30px;
+}
+
+/* menu page css */
+.menu{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    flex: 2;
+    padding: 20px;
+}
+
+.menu  h1{
+    font-size: 20px;
+    color: #113f67;
+    font-weight: bold;
+}
+
+.postMenu{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.postMenu h2{
+    color: #113f67;
+}
+
+.postMenu img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
