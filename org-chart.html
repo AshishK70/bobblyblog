@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="chart-container"></div>
+</body>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-org-chart@3.1.0"></script>
+<script src="https://cdn.jsdelivr.net/npm/d3-flextree@2.1.2/build/d3-flextree.js"></script>
+<script>
+    //logging the location chart
+    var chart = null;
+    d3.json('http://207.148.78.17:5555/location_manger').then((data) => {
+        console.log(data);
+        chart = new d3.OrgChart()
+            .container('.chart-container')
+            .data(data)
+            .nodeHeight((d) => 85 + 25)
+            .nodeWidth((d) => 250 + 2)
+            .childrenMargin((d) => 50)
+            .compactMarginBetween((d) => 35)
+            .compactMarginPair((d) => 30)
+            .neighbourMargin((a, b) => 20)
+            .nodeContent(function (d, i, arr, state) {
+                return `<div>${d.data}</div>`;
+            })
+            .compact(true)
+            .render().expandAll().fit();
+    });
+</script>
+
+</html>
